@@ -2,6 +2,13 @@
 - Ubuntu 20.04.5 LTS server
 - python3.8
 
+**项目介绍**
+- Offline1_STT 离线语音识别
+    -vosk-model-small-cn-0.22 语音模型
+    -recording.py 录音
+    -stt.py 语音识别主程序
+- Offline2_Music 离线音乐识别
+    - 
 ## 安装依赖项
 下载clash-for-linux,修改变量**CLASH_URL**的值
 ```bash
@@ -50,7 +57,6 @@ ctl.!default {
     card 1
 }
 ```
-
 
 ## 上传至github
 ### 生成ssh密钥
