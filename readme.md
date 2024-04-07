@@ -120,8 +120,21 @@ $ git commit -m "首次提交"
 ```
 这会添加目录中的所有文件。如果只想添加特定文件，可以使用git add 文件名。
 
-6. 关联远程账户
+6. 删除已经上传的项目
+```bash
+$ git rm "要删除的文件"
+$ git rm -r "要删除的文件夹"
+$ git add -A
+$ git commit -m "删除了xx文件，并将删除操作添加至缓存区记录"
+```
+如果删除的是空文件夹，则在本地删除
+```bash
+$ rm -rf "要删除的文件夹"
+$ git add -A
+$ git commit -m "删除了xx文件，并将删除操作添加至缓存区记录"
+```
+7. 关联远程账户
 ```bash
 $ git remote add origin https://github.com/用户名/仓库名.git
-$ git push -u origin main
+$ git push origin main
 ```
