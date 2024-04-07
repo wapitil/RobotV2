@@ -6,13 +6,20 @@
 - Offline1_STT 离线语音识别
     - vosk-model-small-cn-0.22 语音模型
     - recording.py 录音
-    - stt.py 语音识别主程序
+    - **stt.py 语音识别主程序**
 - Offline2_Music 离线音乐识别
     - process.py 音频处理
     - recording.py 录音
-    - mtt.py 音乐识别主程序
+    - **mtt.py 音乐识别主程序**
 - Offline3_Opencv 离线视觉识别
-    - 
+    - ml Movenet 模型依赖程序
+    - my_data 摄像机捕捉到的图像存放夹
+    - processed_images 处理后的图像存放夹
+    - tracker 人体检测识别框+关键点检测
+    - utils.py 人体关键点预设
+    - data.py 人体关键点预设
+    - process.py 分类处理
+    - **main.py 视觉识别主程序**
 ## 安装依赖项
 下载clash-for-linux,修改变量**CLASH_URL**的值
 ```bash
