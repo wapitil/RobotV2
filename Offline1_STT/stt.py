@@ -27,9 +27,13 @@ def stt(filename, duration, model_path):
     return result
 
 if __name__ == "__main__":
+    """
+        - model_path 模型所在的文件夹路径
+        - duration 录制持续时间（秒）
+    """
     model_path = "/home/pi/RobotV2/Offline1_STT/vosk-model-small-cn-0.22"
     filename = "output.wav"
-    duration = 3  # 录制持续时间（秒）
+    duration = 3  
     result = ""  # 初始化result变量
     while result != "结束表演":
         result = stt(filename, duration, model_path)
