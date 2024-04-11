@@ -22,7 +22,7 @@
     - **main.py 视觉识别主程序**
 - Servo 舵机调试程序
     - servo.py PCA9685舵机预设程序
-    - servo_init.py 所有舵机初始化程序
+    - setup.py 舵机单步调试程序
 ## 安装依赖项
 下载clash-for-linux,修改变量**CLASH_URL**的值
 ```bash
