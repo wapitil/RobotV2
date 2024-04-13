@@ -1,9 +1,11 @@
 import json
 from vosk import Model, KaldiRecognizer
 import wave
-from recording import record_audio  
+import sys
+sys.path.append('..')
+from tools.mic import record_audio
 
-def stt(filename, duration, model_path):
+def stt(filename="output.wav", duration=3, model_path="/home/pi/RobotV2/Offline1_Audio/vosk-model-small-cn-0.22"):
     # 输入模型路径
     model = Model(model_path)
     
@@ -31,10 +33,7 @@ if __name__ == "__main__":
         - model_path 模型所在的文件夹路径
         - duration 录制持续时间（秒）
     """
-    model_path = "/home/pi/RobotV2/Offline1_STT/vosk-model-small-cn-0.22"
-    filename = "output.wav"
-    duration = 3  
     result = ""  # 初始化result变量
     while result != "结束表演":
-        result = stt(filename, duration, model_path)
+        result = stt()
         print(result)

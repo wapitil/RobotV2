@@ -5,9 +5,8 @@
 ## **项目构成**
 - Offline1_STT 离线语音识别
     - vosk-model-small-cn-0.22 语音模型
-    - recording.py 录音
     - **stt.py 语音识别主程序**
-- Offline2_Music 离线音乐识别
+- Offline2_Music 离线音乐识别 需要重新训练，模型改为48000HZ
     - process.py 音频处理
     - recording.py 录音
     - **mtt.py 音乐识别主程序**

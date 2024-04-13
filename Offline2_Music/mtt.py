@@ -1,7 +1,9 @@
 import tflite_runtime.interpreter as tflite
 import numpy as np
 from process import extract_features
-from recording import record_audio
+import sys
+sys.path.append('..')
+from tools.mic import record_audio
 
 import warnings
 warnings.filterwarnings("ignore")
@@ -14,7 +16,7 @@ def load_model_tflite(model_path):
     return interpreter
 
 # 预测函数，适配TFLite模型
-def predict_tflite(file_path, interpreter, sample_rate=16000):
+def predict_tflite(file_path, interpreter, sample_rate=48000):
     # 提取特征
     mfccs_processed = extract_features(file_path, sample_rate)
     mfccs_processed = np.expand_dims(mfccs_processed, axis=0).astype(np.float32)

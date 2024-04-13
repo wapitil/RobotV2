@@ -4,6 +4,7 @@ import time
 from collections import Counter
 import cv2
 from process import capture_image
+
 if __name__=="__main__":
     class_names = ["站立", "大字站", "弓箭步", "举双手", "蹲马步", "叉腰", "挥手"]
     # 要检测的文件夹

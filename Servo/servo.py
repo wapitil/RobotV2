@@ -109,23 +109,11 @@ class PCA9685:
         pwm1.setServoAngleP1(7, 90)
         pwm1.setServoAngleP1(8, 240)  # 　240 140
 
-        # pwm2 = PCA9685(0x41, debug=False)
+        # pwm2 = PCA9685(0x60, debug=False)
         # pwm2.setPWMFreq(50)
-        # pwm2.setServoAngleP2(1, 80)
-        # pwm2.setServoAngleP2(2, 90)
-        # pwm2.setServoAngleP2(3, 105)
-        # pwm2.setServoAngleP2(4, 122)
-        # pwm2.setServoAngleP2(5, 70)
-        # pwm2.setServoAngleP2(6, 90)
 
-        # pwm2.setServoAngleP2(7, 80)
-        # pwm2.setServoAngleP2(8, 90)
-        # pwm2.setServoAngleP2(9, 105)
-        # pwm2.setServoAngleP2(10, 122)
-        # pwm2.setServoAngleP2(11, 70)
-        # pwm2.setServoAngleP2(12, 90)
 
 if __name__=="__main__":
-
+    "本次焊接后的PCA9685的地址为0x60"
     PCA9685.start()
     pass

@@ -32,13 +32,13 @@ def record_audio(filename, duration=10):
     stream.close()
     p.terminate()
 
-    wf = wave.open(f"{filename}.wav", 'wb')
+    wf = wave.open(f"{filename}", 'wb')
     wf.setnchannels(CHANNELS)
     wf.setsampwidth(p.get_sample_size(FORMAT))
     wf.setframerate(RATE)
     wf.writeframes(b''.join(frames))
     wf.close()
-    convert_to_mp3(f"{filename}.wav", f"{filename}.mp3")
+    # convert_to_mp3(f"{filename}.wav", f"{filename}.mp3")
 
 def convert_to_mp3(input_filename, output_filename):
     sound = AudioSegment.from_wav(input_filename)
@@ -46,9 +46,7 @@ def convert_to_mp3(input_filename, output_filename):
     os.remove(input_filename)
 
 if __name__ == "__main__":
-    filename = "output"
-    # output_filename = "recorded_audio.mp3"
+    filename = "output.wav"
     duration = 10
     record_audio(filename, duration)
-    # convert_to_mp3(filename, output_filename)
     print(f"Audio recorded and saved as {filename}")

@@ -1,7 +1,7 @@
 from logic.Shazzam import Shazzam
-from mic import record_audio
+from tools.mic import record_audio
 
-if __name__=="__main__":
+def main():
     engine = Shazzam()
     '''
     this will add songs present in 'mp3' folder to database
@@ -13,7 +13,9 @@ if __name__=="__main__":
     no need to mention relative path
     '''
     # engine.match_song('5.m4a')
-    filename = "output"
+    filename = "output.wav"
     record_audio(f"./test/{filename}")
-    engine.match_song(f"{filename}.mp3")
+    engine.match_song(f"{filename}")
 
+if __name__=="__main__":
+    main()
