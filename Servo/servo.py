@@ -99,7 +99,7 @@ class PCA9685:
         "机器人通电后初始姿态"
         pwm1 = PCA9685(0x40, debug=False)
         pwm1.setPWMFreq(50)
-        pwm1.setServoAngleP1(0, 90)
+        # pwm1.setServoAngleP1(0, 90)
         pwm1.setServoAngleP1(1, 90)  # 右肩
         pwm1.setServoAngleP1(2, 180)  # 控制上下
         pwm1.setServoAngleP1(3, 90)
@@ -127,5 +127,5 @@ class PCA9685:
 
 if __name__=="__main__":
 
-    # PCA9685.start()
+    PCA9685.start()
     pass
