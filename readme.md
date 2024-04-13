@@ -29,10 +29,10 @@
     - test 存放录音文件
     - mic.py 录音
     - **main.py 音乐识别主程序**
-    > Note 
-    > 树莓派按照原项目文件采集44100hz的音频会出现 IOError: [Errno Invalid sample rate] -9997 问题
-    > 因此这里采集的音频文件为48000HZ,
-    > 原项目链接：https://github.com/akgupta1337/Shazzam-Clone
+    > <p>Note <br>
+    > 树莓派按照原项目文件采集44100hz的音频会出现 IOError: [Errno Invalid sample rate] -9997 问题 <br>
+    > 因此这里采集的音频文件为48000HZ<br>
+    > 原项目链接：https://github.com/akgupta1337/Shazzam-Clone </p>
 ## 安装依赖项
 下载clash-for-linux,修改变量**CLASH_URL**的值
 ```bash
