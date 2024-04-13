@@ -6,12 +6,10 @@
 - Offline1_STT 离线语音识别
     - vosk-model-small-cn-0.22 语音模型
     - **stt.py 语音识别主程序**
-<br>
 - Offline2_Music 离线音乐识别 需要重新训练，模型改为48000HZ
     - process.py 音频处理
     - recording.py 录音
     - **mtt.py 音乐识别主程序**
-<br>
 - Offline3_Opencv 离线视觉识别
     - ml Movenet 模型依赖程序
     - my_data 摄像机捕捉到的图像存放夹
@@ -21,11 +19,9 @@
     - data.py 人体关键点预设
     - process.py 分类处理
     - **main.py 视觉识别主程序**
-<br>
 - Servo 舵机调试程序
     - servo.py PCA9685舵机预设程序
     - setup.py 舵机单步调试程序
-<br>
 - SHazzam-Clone 后续可能会代替Offline2_Music
     - database 声学指纹数据库
     - logic Shazzam类定义
@@ -33,7 +29,6 @@
     - test 存放录音文件
     - mic.py 录音
     - **main.py 音乐识别主程序**
-  <br>
 <br>
 > <p>Note <br>
 > 树莓派按照原项目文件采集44100hz的音频会出现 IOError: [Errno Invalid sample rate] -9997 问题 <br>
