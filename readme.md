@@ -2,7 +2,7 @@
 - Ubuntu 20.04.5 LTS server(64 bit)
 - python3.8
 - RaspberryPi 4B
-**项目介绍**
+## **项目介绍**
 - Offline1_STT 离线语音识别
     - vosk-model-small-cn-0.22 语音模型
     - recording.py 录音
