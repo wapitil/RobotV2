@@ -33,7 +33,7 @@
     > Note 
     > 树莓派按照原项目文件采集44100hz的音频会出现 IOError: [Errno Invalid sample rate] -9997 问题
     > 因此这里采集的音频文件为48000HZ,
-    > 原项目链接：[text](https://github.com/akgupta1337/Shazzam-Clone)
+    > 原项目链接：https://github.com/akgupta1337/Shazzam-Clone
 ## 安装依赖项
 下载clash-for-linux,修改变量**CLASH_URL**的值
 ```bash
