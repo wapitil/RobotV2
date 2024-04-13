@@ -1,7 +1,7 @@
 ## 平台环境
-- Ubuntu 20.04.5 LTS server
+- Ubuntu 20.04.5 LTS server(64 bit)
 - python3.8
-
+- RaspberryPi 4B
 **项目介绍**
 - Offline1_STT 离线语音识别
     - vosk-model-small-cn-0.22 语音模型
@@ -23,6 +23,17 @@
 - Servo 舵机调试程序
     - servo.py PCA9685舵机预设程序
     - setup.py 舵机单步调试程序
+- SHazzam-Clone 后续可能会代替Offline2_Music
+    - database 声学指纹数据库
+    - logic Shazzam类定义
+    - MP3 数据库歌单 采样率 48000HZ
+    - test 存放录音文件
+    - mic.py 录音
+    - **main.py 音乐识别主程序**
+    > Note 
+    > 树莓派按照原项目文件采集44100hz的音频会出现 IOError: [Errno Invalid sample rate] -9997 问题
+    > 因此这里采集的音频文件为48000HZ,
+    > 原项目链接：[text](https://github.com/akgupta1337/Shazzam-Clone)
 ## 安装依赖项
 下载clash-for-linux,修改变量**CLASH_URL**的值
 ```bash
@@ -40,9 +51,12 @@ $ proxy_on
 开启代理之后下载会缩短时间
 ```bash
 $ sudo apt-get update
+$ sudo apt-get upgrade
 $ sudo apt-get install libgl1-mesa-glx
 $ sudo apt-get install libsndfile1
 $ sudo apt install alsa-utils
+$ sudo apt-get install ffmpeg
+$ sudo apt-get install portaudio19-dev
 $ pip install -r requirement.txt
 ```
 
