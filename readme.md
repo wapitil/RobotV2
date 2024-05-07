@@ -34,6 +34,18 @@
     > 因此这里采集的音频文件为48000HZ,
     > 原项目链接：https://github.com/akgupta1337/Shazzam-Clone
 ## 安装依赖项
+
+```bash
+$ sudo apt-get update
+$ sudo apt-get upgrade
+$ sudo apt-get install libgl1-mesa-glx
+$ sudo apt-get install libsndfile1
+$ sudo apt install alsa-utils
+$ sudo apt-get install ffmpeg
+$ sudo apt-get install portaudio19-dev
+$ sudo apt-get install i2c-tools
+$ pip install -r requirement.txt
+```
 下载clash-for-linux,修改变量**CLASH_URL**的值
 ```bash
 $ git clone https://github.com/Elegycloud/clash-for-linux-backup.git
@@ -48,17 +60,6 @@ $ source /etc/profile.d/clash.sh
 $ proxy_on
 ```
 开启代理之后下载会缩短时间
-```bash
-$ sudo apt-get update
-$ sudo apt-get upgrade
-$ sudo apt-get install libgl1-mesa-glx
-$ sudo apt-get install libsndfile1
-$ sudo apt install alsa-utils
-$ sudo apt-get install ffmpeg
-$ sudo apt-get install portaudio19-dev
-$ pip install -r requirement.txt
-```
-
 ## 配置声卡
 找出声卡设备的设备号，然后更改声卡设置，
 ```bash
