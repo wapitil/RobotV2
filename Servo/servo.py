@@ -83,35 +83,5 @@ class PCA9685:
         self.setPWM(channel, 0, pulse)
 
     def setServoAngleP1(self, channel, angle):
-        "设置舵机的角度"
-        if channel == 1 or channel == 0:
-            self.setServoPulse(channel, 500+(2000/270)*angle)
-        elif channel == 5 or channel == 2:
-            self.setServoPulse(channel, 500+(2000/270)*angle)
-
-    def setServoAngleP2(self, channel, angle):
-        "设置舵机的角度"
+        "设置舵机的角度 控制270度舵机"
         self.setServoPulse(channel, 500+(2000/270)*angle)
-
-    # def start():
-    #     "机器人通电后初始姿态"
-    #     pwm1 = PCA9685(0x40, debug=False)
-    #     pwm1.setPWMFreq(50)
-    #     # pwm1.setServoAngleP1(0, 90)
-    #     pwm1.setServoAngleP1(1, 90)  # 右肩
-    #     pwm1.setServoAngleP1(2, 180)  # 控制上下
-    #     pwm1.setServoAngleP1(3, 90)
-    #     pwm1.setServoAngleP1(4, 90)
-    #     pwm1.setServoAngleP1(5, 180)  # 左键
-    #     pwm1.setServoAngleP1(6, 0)
-    #     pwm1.setServoAngleP1(7, 90)
-    #     pwm1.setServoAngleP1(8, 240)  # 　240 140
-
-    #     # pwm2 = PCA9685(0x60, debug=False)
-    #     # pwm2.setPWMFreq(50)
-
-
-if __name__=="__main__":
-    "本次焊接后的PCA9685的地址为0x60"
-    PCA9685.start()
-    pass
